@@ -92,13 +92,52 @@
  }
 
  .link-arrow:hover::after {
-   margin-left: 10px;
+    margin-left: 10px;
  }
 
 
- @media  screen and (min-width: 1024px) {
-   .link-arrow {
-      font-size: 1.5rem;
-   }
-   
+ @media screen and (min-width: 1024px) {
+    .link-arrow {
+       font-size: 1.5rem;
+    }
+
+ }
+
+ /* Badges */
+
+ .badge {
+    border-radius: 30px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    /* To prevent the badge from wrapping into the second line. Badges should always appear on a signle line regardless of how small the container is */
+    white-space: nowrap;
+ }
+
+ .badge--small {
+    font-size: 1.6rem;
+ }
+
+ .badge--secondary {
+    background-color: var(--color-secondary);
+ }
+
+ .badge--secondary-dark {
+    background-color: #00ccff;
+ }
+
+ .badge--primary-dark {
+    background-color: #3d6cb4;
+ }
+
+ @media screen and (min-width: 1024px) {
+    .badge {
+       font-size: 1.5rem;
+       padding: 1rem 1.5rem;
+    }
+
+    .badge--small {
+       font-size: 1.2rem;
+    }
  }
