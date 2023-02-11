@@ -407,6 +407,30 @@
    margin-left: 1.5rem;
  }
 
+ .plan--popular .card__header{
+   position: relative;
+ }
+
+
+/* used ::before here so everytime that plan--popular is added, assing img is not required in the html code*/
+ .plan--popular .card__header::before{
+   content: url(/images/popular.svg);
+   height: 120px;
+   position: absolute;
+   right: 5%;
+   top: -6px;
+   width: 40px;
+ }
+/*
+ .plan--popular__img{
+   height: 120px;
+   position: absolute;
+   right: 3rem;
+   top: -16px;
+   width: 40px;
+ }
+ */
+
  @media screen and (min-width: 1024px) {
    .plan__name{
       font-size: 1.4rem;
@@ -424,3 +448,4 @@
       font-size: 1.7rem;
     }
  }
+
