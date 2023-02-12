@@ -449,3 +449,36 @@
     }
  }
 
+
+ /* Medias */
+
+ .media{
+   background-color: #000;
+   display: flex;
+   margin-bottom: 2rem;
+ }
+
+ .media__icon{
+   margin: 1rem 2rem;
+ }
+
+ .media__heading{
+   color: #fff;
+   font-size: 2.4rem;
+   font-weight: 600;
+   margin-top:0;
+ }
+
+ .media__description{
+   font-size: 2rem;
+ }
+
+@media screen and (min-width: 1024px) {
+   .media__heading{
+      font-size: 1.8rem;
+    }
+
+    .media__description{
+      font-size: 1.8rem;
+    }
+}
