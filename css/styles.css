@@ -17,6 +17,7 @@
 
  .container {
     max-width: 1024px;
+    margin: 0 auto;
  }
 
 
@@ -304,9 +305,9 @@
     width: 100%;
  }
 
- .btn--stretched{
-   padding-left: 6rem;
-   padding-right: 6rem;
+ .btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
  }
 
 
@@ -645,7 +646,8 @@
 
     .callout .grid--1x2 {
        grid-column-gap: 2rem;
-       grid-template-columns: 1fr auto; /* to stretch the first column to take up all extra space */
+       grid-template-columns: 1fr auto;
+       /* to stretch the first column to take up all extra space */
     }
 
     .callout__body {
@@ -656,40 +658,85 @@
 
  /* Collapsible */
 
-.collapsible__header{
-   display: flex;
-   justify-content: space-between;
-}
+ .collapsible__header {
+    display: flex;
+    justify-content: space-between;
+ }
 
-.collapsible__heading{
-   font-size: 3rem;
-   margin: 0;
-}
+ .collapsible__heading {
+    font-size: 3rem;
+    margin: 0;
+ }
 
-.collapsible-icon{
-   align-self: center;
-   
-}
+ .collapsible-icon {
+    align-self: center;
 
-.collapsible__chevron{
-   transform: rotate(-90deg);
-   transition: transform 0.3s;
-}
+ }
 
-.collapsible__content{
-   /* display: none; we cannot animate this property so using max-height property */
-   max-height: 0;
-   opacity: 0;
-   overflow: hidden;
-   transition: all 0.3s;
-}
+ .collapsible__chevron {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+ }
 
-.collapsible--expanded .collapsible__chevron{
-   transform: rotate(0);
-}
+ .collapsible__content {
+    /* display: none; we cannot animate this property so using max-height property */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+ }
 
-.collapsible--expanded .collapsible__content{
- /* display: block;*/
- max-height: 100vh;
- opacity:1;
-}
+ .collapsible--expanded .collapsible__chevron {
+    transform: rotate(0);
+ }
+
+ .collapsible--expanded .collapsible__content {
+    /* display: block;*/
+    max-height: 100vh;
+    opacity: 1;
+ }
+
+
+ /* Blocks */
+
+ .block {
+    --padding-vertical: 6rem;
+    padding: var(--padding-vertical) 2rem;
+    text-align: center;
+ }
+
+ .block__header {
+    text-align: center;
+ }
+
+ .block--dark {
+    background-color: #000;
+    color: #b9c3cf;
+ }
+
+ .block--dark .block__header {
+    margin: 0 auto;
+ }
+
+ .block--dark h1,
+ .block--dark h2,
+ .block--dark h3{
+    color: #fff;
+ }
+
+ .block--skewed-right {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    padding-bottom: calc(var(--padding-vertical) + 4rem );
+ }
+
+ .block--skewed-left {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 80%);
+    padding-bottom: calc(var(--padding-vertical) + 4rem );
+ }
+
+ @media screen and (min-width: 1024px) {
+
+    .block__description {
+       font-size: 1.8rem;
+    }
+ }
