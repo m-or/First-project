@@ -221,11 +221,7 @@
     width: 30px;
  }
 
- .icon--btn {
-    fill: #fff;
-    margin-right: 1rem;
-    vertical-align: middle;
- }
+ 
 
 
  /*
@@ -311,6 +307,14 @@
     padding-right: 6rem;
  }
 
+ .btn .icon {
+   fill: #fff;
+   height: 2rem;
+   margin-right: 1rem;
+   vertical-align: middle;
+   width: 2rem;
+}
+
 
  @media screen and (min-width: 1024px) {
     .btn {
@@ -348,7 +352,7 @@
 
  .input-group {
     border-radius: var(--border--radius);
-    border: 1px solid var(--color-border);
+    border: 2px solid var(--color-border);
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
@@ -363,7 +367,7 @@
 
  .input-group .input {
     border: 0;
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
     /* or flex-grow: 1  but this will make search button to go outside of dix when viewport is small*/
  }
@@ -834,6 +838,43 @@
    .hero__header{
       text-align: left;
    }
+ }
+
+ /* Block-domain */
+
+ .block-domain .input-group{
+   border: 0;
+   box-shadow: 0 0 30px 20px #e6ebee;
+   margin: 4rem auto;
+   max-width: 700px;
+ }
+
+ .block-domain__description{
+   font-size: 2.2rem;
+ }
+
+ .block-domain__prices{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   margin: 0 auto;
+   max-width: 800px;
+   row-gap: 2rem;
+ }
+
+ .block-domain__prices .list__item{
+   font-weight: 700;
+ }
+
+ @media screen and (min-width: 768px) {
+   .block-domain__prices{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .block-domain__description{
+      font-size: 1.8rem;
+    }
  }
 
  
