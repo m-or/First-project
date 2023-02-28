@@ -437,6 +437,14 @@
     position: relative;
  }
 
+.plan{
+   transition: transform 0.3s;
+}
+
+.plan:hover{
+   transform: scale(1.05);
+}
+
 
  /* used ::before here so everytime that plan--popular is added, assing img is not required in the html code*/
  .plan--popular .card__header::before {
@@ -474,6 +482,14 @@
     .plan__description {
        font-size: 1.7rem;
     }
+
+    .plan--popular{
+      transform: scale(1.1);
+    }
+
+    .plan--popular:hover{
+      transform: scale(1.15);
+   }
  }
 
 
@@ -876,5 +892,28 @@
       font-size: 1.8rem;
     }
  }
+
+
+ /* Block-plan */
+
+.block-plan .plan{
+   margin: 0 auto;
+ }
+
+.block-plan .card{
+   margin: 3rem 6rem;
+   max-width: 500px;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+   
+   .block-plan .card{
+      margin: 3rem 2rem ;
+   }
+
+}
 
  
