@@ -724,7 +724,6 @@
     --padding-vertical: 6rem;
     /* why do we use a variable here? because if we change paading here, we should remeber to change it for block--skewed class as well. To avoid that we use variable and calc function. */
     padding: var(--padding-vertical) 2rem;
-    text-align: center;
  }
 
  .block__header {
@@ -906,8 +905,6 @@
 }
 
 
-
-
 @media screen and (min-width: 1024px) {
    
    .block-plan .card{
@@ -915,5 +912,63 @@
    }
 
 }
+
+
+/* Features */
+
+.feature{
+   margin: 6rem 1.5rem
+}
+
+.feature .media{
+   flex-direction: column;
+}
+
+.feature__heading{
+   color: var(--color-heading);
+   font-size: 3rem;
+   font-weight: 700;
+}
+
+.feature .media__icon{
+   margin-left: 0;
+}
+
+.feature__description{
+   font-size: 2.4rem;
+   margin-bottom: 0;
+}
+
+.feature__image{
+   width: 100%;
+}
+
+.feature .grid{
+   align-items: center;
+   gap: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+   
+   .feature--reverse .grid--1x2{
+      grid-template-areas: "image content";
+   }
+
+   .feature--reverse .feature__content{
+      grid-area: content;
+   }
+
+   .feature--reverse .feature__image{
+      grid-area: image;
+   }
+
+   /*second approach withouth an additional class
+
+   .feature:nth-of-type(even) . feature__content{
+      order:2;
+   }
+   */
+}
+
 
  
